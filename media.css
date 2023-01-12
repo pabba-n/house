@@ -1,0 +1,14 @@
+@media(max-width: 975px){
+    h2{
+        font-size: 200%
+    }
+    h1{
+        font-size: 500%
+    }
+}
+@media(max-width: 975px){
+    .outer-menu .hamburger {
+        top: -60px;
+        left: 30px;
+    }
+  }

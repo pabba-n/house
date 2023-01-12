@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="house.css">
+        <link rel="stylesheet" href="menu.css">
+        <link rel="stylesheet" href="media.css">
+        <meta charset="UTF-8">
+        <meta name='viewport' content="width=device-width, initial scale=1">
+    </head>
+    <style>
+    @media(max-width: 975px){
+        body{
+            margin-top: 35%;
+        }
+    }
+    </style>
+    <body>
+        <div class="outer-menu">
+            <input class="checkbox-toggle" type="checkbox" />
+            <div class="hamburger">
+              <div></div>
+            </div>
+            <div class="menu">
+              <div>
+                <div>
+                  <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="chores.html">CHORES</a></li>
+                    <li><a href="expectations.html">HOUSE EXPECTATIONS</a></li>
+                    <li><a href="meals.html">MEAL PREP</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        </div>
+    </body>
+    <h2>Chores</h2>
+    <h3 class="chores" id="ab"></h3>
+    <h3 class="chores" id="cd"></h3>
+    <h3 class="chores" id="ef"></h3>
+
+    <script    src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+    <script>
+        var date = new Date();
+        var mates = [];
+        var chores = [];
+        console.log(date);
+        var currDate = new Date(date.getFullYear(), 0, 1); 
+        var numDays =  Math.floor((date - currDate) / (24 * 60 * 60 * 1000));
+        var numWeeks = Math.ceil((numDays + 1) / 7); 
+        console.log(numWeeks);
+        var starter = numWeeks % 6;
+        var counter = 0;
+        while(counter < 6) {
+            console.log("starter: " + starter);
+            console.log("counter: " + counter);
+            if (starter < 5) {
+                mates[starter] = counter;
+            } else {
+                mates[starter] = counter;
+                starter = -1;
+            }
+            starter++;
+            counter++
+        }
+        console.log(mates);
+        chores[0] = "A: ";
+        chores[1] = "B: "
+        chores[2] = "C: "
+        chores[3] = "D: "
+        chores[4] = "E: "
+        chores[5] = "F: "
+        for(i=0; i<6; i++) {
+            if (0 === mates[i]) {
+                chores[i] += "Wipe down surfaces<br>";
+            }
+            if (1 === mates[i]) {
+                chores[i] += "Wipe down surfaces<br>";
+            }
+            if (2 === mates[i]) {
+                chores[i] += "Take trash out to curb<br>";
+            }
+            if (3 === mates[i]) {
+                chores[i] += "Take trash out to curb<br>";
+            }
+            if (4 === mates[i]) {
+                chores[i] += "Vacuum<br>";
+            }
+            if (5 === mates[i]) {
+                chores[i] += "Vacuum<br>";
+            }   
+        }
+
+        console.log(chores);
+        if(numWeeks % 2 == 0) {
+            document.getElementById('ab').innerHTML = chores[0];
+            document.getElementById('cd').innerHTML = chores[2];
+            document.getElementById('ef').innerHTML = chores[4];
+        }
+        
+        if(numWeeks % 2 == 1) {
+            document.getElementById('ab').innerHTML = chores[1];
+            document.getElementById('cd').innerHTML = chores[3];
+            document.getElementById('ef').innerHTML = chores[5];
+        }
+    </script>
+ </html>

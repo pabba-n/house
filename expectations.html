@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="house.css">
+        <link rel="stylesheet" href="menu.css">
+        <link rel="stylesheet" href="media.css">
+        <meta charset="UTF-8">
+        <meta name='viewport' content="width=device-width, initial scale=1">
+    </head>
+    <style>
+        @media(max-width: 975px){
+            body{
+                margin-top: 35%;
+            }
+        }
+    </style>
+    <body>
+        <div class="outer-menu">
+            <input class="checkbox-toggle" type="checkbox" />
+            <div class="hamburger">
+              <div></div>
+            </div>
+            <div class="menu">
+              <div>
+                <div>
+                  <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="chores.html">CHORES</a></li>
+                    <li><a href="expectations.html">HOUSE EXPECTATIONS</a></li>
+                    <li><a href="meals.html">MEAL PREP</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        </div>
+    </body>
+    <h2>House Expectations</h2>
+    <button class="accordion">Having People Over</button>
+        <div class="panel">
+            <p>
+                <ul>
+                    <li>If you're having more than 4 people over give a heads up</li>
+                    <li>Give a heads up a good amount in advance if you're gonna have more than 10 people over (no ragers tho &#129402;)</li>
+                </ul>
+            </p>
+        </div>
+    <button class="accordion">Utilities</button>
+        <div class="panel">
+            <p>Split utilities equally. If utilities are ever higher than usual, we will discuss it to see how to reduce costs for the next month.</p>
+        </div>
+    <button class="accordion">Weekly Rotating chores</button>
+        <div class="panel">
+            <p>
+                <ul>
+                    <li>Vacuuming - vacuum kitchen, living room, dining room, stairs, and upstairs hallway</li>
+                    <li>Wiping - wipe surfaces in kitchen, living room, and dining room with disinfectant</li>
+                    <li>Trash -  wheel the trash bin from the garage to the curb on Sunday nights for trash day</li>
+                </ul>
+            </p>
+        </div>    
+    <button class="accordion">Clean as you go chores</button>
+        <div class="panel">
+          <p>
+            <ul>
+                <li>Take trash out of kitchen whenever it is full to the trash bin in the garage</li>
+                <li>Rinse your dish and put it in the dishwasher immediately</li>
+                <li>Turn on the dishwasher if you put in the last dish before it is full</li>
+                <li>Take dishes out of dishwasher if you see they've been cleaned</li>
+            </ul>
+          </p>
+        </div> 
+    <button class="accordion">Deep cleaning bathrooms</button>
+        <div class="panel">
+          <p>Deep clean bathrooms once a semester</p>
+        </div>   
+    <button class="accordion">Splitting groceries</button>
+        <div class="panel">
+          <p>We'll split eggs, oil, rice, butter, spices and condiments</p>
+        </div>
+    <button class="accordion">Maintence issues</button>
+        <div class="panel">
+          <p>Generally split them and speak up if you feel like you've been dealing with a lot of them them!</p>
+        </div>
+    <button class="accordion">Fridge Shelves</button>
+        <div class="panel">
+        <p>We should all have designated shelf spaces</p>
+        </div>
+    <button class="accordion">Taking off shoes</button>
+        <div class="panel">
+          <p>We are a no shoes house, so try to take shoes off at the top of the stairs. If you need to grab something really quick with shoes on that's fine.</p>
+        </div>
+    <button class="accordion">Quiet Hours</button>
+        <div class="panel">
+          <p>It's ok to make noise between 9am-11:30pm. Outside of these hours, please keep the noise down.</p>
+        </div>
+    
+ </html>
+<script    src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+        } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+    });
+    }
+</script>

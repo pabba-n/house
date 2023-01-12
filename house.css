@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Dangrek&display=swap');
+h1{
+    color: black;
+    font-family: 'Dangrek', cursive;
+    font-size: 600%; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: normal; 
+    line-height: 75%;
+    letter-spacing: 8px;
+    text-align: center;
+} 
+
+h1.cat {
+    color: black;
+    font-weight: bold;
+    letter-spacing: 0px;
+    font-size: 450%;
+}
+h2 {
+    color: black;
+    font-family: 'Dangrek', cursive;
+    font-size: 400%; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: normal; 
+    line-height: 75%;
+    letter-spacing: 8px;
+    text-align: center; 
+    letter-spacing: 0px;  
+}
+button{
+    color: black;
+    font-family: 'Dangrek', cursive;
+    font-size: 150%; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: normal; 
+    line-height: 75%;
+    letter-spacing: 8px;
+    text-align: center; 
+    letter-spacing: 0px;  
+    border-radius: 10px;
+    margin: 3px;
+}
+h3 {
+    color: black;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 150%; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: normal; 
+    line-height: 150%;
+    letter-spacing: 8px;
+    text-align: center; 
+    letter-spacing: 0px;  
+    border-radius: 10px;
+    margin: 3px;
+}
+p,ul{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 125%; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: normal; 
+    line-height: 115%;
+    letter-spacing: 8px;
+    text-align: left; 
+    letter-spacing: 0px;    
+}
+
+svg {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+body{
+    margin-top:10%;
+    align-items: center;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background-color: rgba(247, 221, 92, 0.7);
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .accordion:hover {
+    background-color: rgb(255, 167, 4);
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+ .chores {
+    text-align: center;
+  }
