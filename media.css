@@ -1,6 +1,7 @@
 @media(max-width: 975px){
     h2{
-        font-size: 200%
+        font-size: 200%;
+        line-height: 100%;
     }
     h1{
         font-size: 500%

@@ -11,6 +11,15 @@
         body{
             margin-top: 35%;
         }
+        h2{
+            font-size: 300%;
+            line-height: 100%;
+        }
+    }
+    
+    #countdown {
+        color: rgb(255, 167, 4);
+        font-size: 250%;
     }
     </style>
     <body>
@@ -34,6 +43,9 @@
         </div>
     </body>
     <h2>Chores</h2>
+    <h3>Please do your chore within the next</h3>
+    <h2 id="countdown"></h2>
+    <br>
     <h3 class="chores" id="ab"></h3>
     <h3 class="chores" id="cd"></h3>
     <h3 class="chores" id="ef"></h3>
@@ -42,9 +54,10 @@
 
     <script>
         var date = new Date();
+        var countdown = 7 - date.getDay();
         var mates = [];
         var chores = [];
-        console.log(date);
+        document.getElementById('countdown').innerHTML = countdown + " days!";
         var currDate = new Date(date.getFullYear(), 0, 1); 
         var numDays =  Math.floor((date - currDate) / (24 * 60 * 60 * 1000));
         var numWeeks = Math.ceil((numDays + 1) / 7); 
@@ -92,6 +105,7 @@
         }
 
         console.log(chores);
+        
         if(numWeeks % 2 == 0) {
             document.getElementById('ab').innerHTML = chores[0];
             document.getElementById('cd').innerHTML = chores[2];
